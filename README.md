@@ -12,15 +12,7 @@
 
 ## **目录**
 
-[0. How to run](#how-to-run)：如何启动运行本项目
-
-[1. Setup](# 1. Setup)：如何从0搭建项目骨架
-
-[2. Service Development](# 2. Service Development)：服务开发细节，包括：城市服务、标签服务、班级服务、小组服务（未完成）和学生服务（未完成）
-
-[3. commons](# 3. commons)：关于公共类
-
-[4. Conclusion](# 4. Conclusion)：一点点🤏小总结
+[TOC]
 
 
 
@@ -42,7 +34,7 @@ API测试：**Postman**
 
 
 
-# How to run
+# 0. How to run
 
 1. 安装consul，并启动（运行命令）：
 
