@@ -12,7 +12,7 @@
 
 ## **目录**
 
-[0. How to run](#0. How to run)：如何启动运行本项目
+[0. How to run](#0.how-to-run)：如何启动运行本项目
 
 [1. Setup](# 1. Setup)：如何从0搭建项目骨架
 
