@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>clazz-web-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>clazz-commons</module>
+        <module>clazz-city</module>
+        <module>clazz-tag</module>
+        <module>clazz-clazz</module>
+        <module>clazz-group</module>
+        <module>clazz-student</module>
+        <module>clazz-gateway</module>
+    </modules>
+
+    <!--引入springboot父项目版本-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.5.RELEASE</version>
+    </parent>
+
+    <!--自定义属性-->
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <spring.cloud.version>Hoxton.SR6</spring.cloud.version>
+        <mybatis.springboot.version>2.2.0</mybatis.springboot.version>
+        <mysql.version>5.1.40</mysql.version>
+        <druid.version>1.2.6</druid.version>
+    </properties>
+
+    <!--  维护springcloud依赖  -->
+    <!--书写在这个标签里面依赖 只维护版本号 不会实际引入到项目中-->
+    <dependencyManagement>
+        <dependencies>
+            <!--全局维护使用那个springcloud 版本-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+
+            <!--mybatis-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.springboot.version}</version>
+            </dependency>
+
+            <!--mysql-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!--druid-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <!--redis-->
+            <!--es-->
+            <!--mq-->
+        </dependencies>
+    </dependencyManagement>
+
+</project>

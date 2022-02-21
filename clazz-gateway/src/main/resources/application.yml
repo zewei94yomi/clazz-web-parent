@@ -1,0 +1,49 @@
+#指定网关端口
+server:
+  port: 9999
+spring:
+  application:
+    name: GATEWAY
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+
+    gateway:
+      routes: # 配置路由规则
+        - id: city_router #配置城市路由
+          uri: lb://CITIES
+          predicates:
+            - Path=/clazz-web/city/demos/**,/clazz-web/city/cities/**
+          filters:
+            - StripPrefix=2
+
+        - id: tag_router #配置标签路由
+          uri: lb://TAGS
+          predicates:
+            - Path=/clazz-web/tag/**
+          filters:
+            - StripPrefix=2
+
+        - id: group_router #配置小组路由
+          uri: lb://GROUPS
+          predicates:
+            - Path=/clazz-web/group/**
+          filters:
+            - StripPrefix=2
+
+
+        - id: student_router #配置学生路由
+          uri: lb://STUDENTS
+          predicates:
+            - Path=/clazz-web/student/**
+          filters:
+            - StripPrefix=2
+
+        - id: clazz_router #配置班级路由
+          uri: lb://CLAZZS
+          predicates:
+            - Path=/clazz-web/clazz/**
+          filters:
+            - StripPrefix=2
+

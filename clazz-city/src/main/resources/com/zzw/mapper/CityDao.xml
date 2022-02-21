@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzw.dao.CityDao">
+
+    <resultMap type="com.zzw.entity.City" id="CityMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询所有-->
+    <select id="queryAll" resultMap="CityMap">
+        select id, name
+        from city
+    </select>
+
+    <!--添加城市-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into city(name)
+        values (#{name})
+    </insert>
+
+    <!--查询城市信息-->
+    <select id="queryById" resultMap="CityMap">
+        select id,
+               name
+        from city
+        where id = #{id}
+    </select>
+</mapper>
+

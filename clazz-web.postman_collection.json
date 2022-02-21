@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "8ebf917d-116c-4b14-9b1c-41fa0d2dfd3c",
+		"name": "clazz-web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "城市管理",
+			"item": [
+				{
+					"name": "城市列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}city/cities",
+							"host": [
+								"{{Base_URL}}city"
+							],
+							"path": [
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加城市",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"伦敦\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL}}city/cities",
+							"host": [
+								"{{Base_URL}}city"
+							],
+							"path": [
+								"cities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "班级管理",
+			"item": [
+				{
+					"name": "班级列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}clazz/clazzs",
+							"host": [
+								"{{Base_URL}}clazz"
+							],
+							"path": [
+								"clazzs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加班级",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/clazz/clazzs",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"clazz",
+								"clazzs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "标签管理",
+			"item": [
+				{
+					"name": "标签列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}tag/tags",
+							"host": [
+								"{{Base_URL}}tag"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加标签",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"天才班\",\n    \"type\":\"班级\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL}}tag/tags",
+							"host": [
+								"{{Base_URL}}tag"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除标签",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}tag/tags/20",
+							"host": [
+								"{{Base_URL}}tag"
+							],
+							"path": [
+								"tags",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "小组管理",
+			"item": []
+		},
+		{
+			"name": "学生管理",
+			"item": []
+		}
+	]
+}
